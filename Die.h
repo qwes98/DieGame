@@ -11,10 +11,14 @@
 
 class Die {
 private:
-	int faceValue;
+	const int dieMinValue = 1;
+	const int dieMaxValue = 6;
+	mutable int faceValue;
+
+	int intRandom(const int min, const int max) const;
 public:
-	void roll();
-	int getFaceValue();
+	void roll() const;
+	int getFaceValue() const;
 };
 
 #endif  //_DIE_H
